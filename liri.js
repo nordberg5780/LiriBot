@@ -35,8 +35,8 @@ switch (userChoice) {
         doThis();
         break;
     default:
-        logThis("Please enter a valid search term, such as {concert-this},");
-        logThis("{spotify-this-song}, {movie-this}, or {do-what-it-says}");
+        console.log("Please enter a valid search term, such as {concert-this},");
+        console.log("{spotify-this-song}, {movie-this}, or {do-what-it-says}");
         break;
 }
 
@@ -54,10 +54,10 @@ function spotifyThis() {
         }
 
         var userSong = data.tracks.items;
-        logThis("Artist: " + userSong[0].artists[0].name);
-        logThis("Song Name: " + userSong[0].name);
-        logThis("Preview Link: " + userSong[0].preview_url);
-        logThis("Album: " + userSong[0].album.name);
+        console.log("Artist: " + userSong[0].artists[0].name);
+        console.log("Song Name: " + userSong[0].name);
+        console.log("Preview Link: " + userSong[0].preview_url);
+        console.log("Album: " + userSong[0].album.name);
     });
 };
 
@@ -72,14 +72,14 @@ function movies() {
     axios.get("http://www.omdbapi.com/?t=" + userQuery + "&y=&plot=short&apikey=5870c63c")
     .then(function(response) {
 
-        logThis("Title: " + response.data.Title);
-        logThis("Year Released: " + response.data.Year);
-        logThis("IMDB rating: " + response.data.imdbRating);
-        logThis("Rotten Tomatoes Rating: " + response.data.Ratings[1].Value);
-        logThis("Country/Countries Produced: " + response.data.Country);
-        logThis("Language: " + response.data.Language);
-        logThis("Plot: " + response.data.Plot);
-        logThis("Cast: " + response.data.Actors);
+        console.log("Title: " + response.data.Title);
+        console.log("Year Released: " + response.data.Year);
+        console.log("IMDB rating: " + response.data.imdbRating);
+        console.log("Rotten Tomatoes Rating: " + response.data.Ratings[1].Value);
+        console.log("Country/Countries Produced: " + response.data.Country);
+        console.log("Language: " + response.data.Language);
+        console.log("Plot: " + response.data.Plot);
+        console.log("Cast: " + response.data.Actors);
     });
 };
 
@@ -92,9 +92,9 @@ function concertThis() {
     .then(function(response) {
         for (var i = 0; i < response.data.length; i++) {
 
-            logThis("Venue Name: "+ response.data[i].venue.name);
-            logThis("Venue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.country);
-            logThis("Date of the Event: " + moment(response.data[i].datetime).format("L"));
+            console.log("Venue Name: "+ response.data[i].venue.name);
+            console.log("Venue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.country);
+            console.log("Date of the Event: " + moment(response.data[i].datetime).format("L"));
         }
     });
 }
