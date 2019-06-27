@@ -3,14 +3,14 @@ Description: LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpr
 
 <h1>Instructions</h1>
 
-<h3>node liri.js concert-this <artist/band name here></h3>
+<h3>node liri.js concert-this</h3>
 
 This will search the Bands in Town Artist Events API ("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp") for an artist and render the following information about each event to the terminal:
   * Name of the venue
   * Venue location
   * Date of the Event (use moment to format this as "MM/DD/YYYY")
 
-<h3>node liri.js spotify-this-song '<song name here>'</h3>
+<h3>node liri.js spotify-this-song</h3>
   
 This will show the following information about the song in your terminal/bash window
   * Artist(s)
@@ -29,7 +29,7 @@ The Spotify API requires you sign up as a developer to generate the necessary cr
   * Step Four: On the next screen, scroll down to where you see your client id and client secret. Copy these values down somewhere,     
     you'll need them to use the Spotify API and the node-spotify-api package.
 
-<h3>node liri.js movie-this '<movie name here>'</h3>
+<h3>node liri.js movie-this</h3>
 This will output the following information to your terminal/bash window:
 
    * Title of the movie.
